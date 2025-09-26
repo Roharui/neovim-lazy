@@ -21,6 +21,22 @@ vim.api.nvim_create_user_command(
 )
 
 vim.api.nvim_create_user_command(
+  "Dashboard",
+  function()
+    vim.cmd("only")
+    Snacks.dashboard()
+    print("Welcome back, " .. vim.fn.getenv("USER") .. "!")
+  end,
+  {}
+)
+
+vim.api.nvim_create_user_command(
+  "Lazygit",
+  function() Snacks.lazygit() end,
+  {}
+)
+
+vim.api.nvim_create_user_command(
   "Fzf",
   function() Snacks.picker.files() end,
   {}
