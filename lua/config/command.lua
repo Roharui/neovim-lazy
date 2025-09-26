@@ -14,3 +14,34 @@ vim.api.nvim_create_user_command(
   { nargs = 1 }
 )
 
+vim.api.nvim_create_user_command(
+  "ReloadConfig",
+  function() vim.cmd("source $MYVIMRC") end,
+  {}
+)
+
+vim.api.nvim_create_user_command(
+  "Fzf",
+  function() Snacks.picker.files() end,
+  {}
+)
+
+vim.api.nvim_create_user_command(
+  "Fz",
+  function() Snacks.picker() end,
+  {}
+)
+
+vim.api.nvim_create_user_command(
+  "Fzb",
+  function() Snacks.picker.buffers() end,
+  {}
+)
+
+vim.api.nvim_create_user_command(
+  "FzfConfig",
+  function() Snacks.picker.files({
+    cwd = vim.fn.stdpath("config"),
+  }) end,
+  {}
+)
