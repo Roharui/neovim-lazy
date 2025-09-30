@@ -15,12 +15,6 @@ vim.api.nvim_create_user_command(
 )
 
 vim.api.nvim_create_user_command(
-  "ReloadConfig",
-  function() vim.cmd("source $MYVIMRC") end,
-  {}
-)
-
-vim.api.nvim_create_user_command(
   "Dashboard",
   function()
     vim.cmd("only")
@@ -30,42 +24,3 @@ vim.api.nvim_create_user_command(
   {}
 )
 
-vim.api.nvim_create_user_command(
-  "Lazygit",
-  function() Snacks.lazygit() end,
-  {}
-)
-
-vim.api.nvim_create_user_command(
-  "Fzg",
-  function() Snacks.picker.grep() end,
-  {}
-)
-
-
-
-vim.api.nvim_create_user_command(
-  "Fzf",
-  function() Snacks.picker.files() end,
-  {}
-)
-
-vim.api.nvim_create_user_command(
-  "Fz",
-  function() Snacks.picker() end,
-  {}
-)
-
-vim.api.nvim_create_user_command(
-  "Fzb",
-  function() Snacks.picker.buffers() end,
-  {}
-)
-
-vim.api.nvim_create_user_command(
-  "FzfConfig",
-  function() Snacks.picker.files({
-    cwd = vim.fn.stdpath("config"),
-  }) end,
-  {}
-)

@@ -1,15 +1,38 @@
 
-vim.g.mapleader = ","  -- Make sure to set `mapleader` before lazy.nvim startup
-vim.g.maplocalleader = ","
-
 vim.keymap.set(
-  "n", 
-  "<leader><space>", 
-  function() vim.cmd('echo "Hello World!"') end
+  {"n", "i"}, -- string or table
+  "<C-c>", -- string
+  "<Esc>" -- string or function
 )
 
 vim.keymap.set(
-    {"n", "i"}, -- string or table
-    "<C-c>", -- string
-    "<ESC>"  -- string or function
+  {"n","t"}, -- string or table
+  "<C-Up>", -- string
+  function()
+    vim.cmd('resize +1') 
+  end -- string or function
+)
+
+vim.keymap.set(
+  {"n","t"}, -- string or table
+  "<C-Down>", -- string
+  function()
+    vim.cmd('resize -1') 
+  end -- string or function
+)
+
+vim.keymap.set(
+  {"n","t"}, -- string or table
+  "<C-Right>", -- string
+  function()
+    vim.cmd('vertical resize +1') 
+  end -- string or function
+)
+
+vim.keymap.set(
+  {"n","t"}, -- string or table
+  "<C-Left>", -- string
+  function()
+    vim.cmd('vertical resize -1') 
+  end -- string or function
 )
