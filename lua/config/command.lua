@@ -37,6 +37,14 @@ vim.api.nvim_create_user_command(
 )
 
 vim.api.nvim_create_user_command(
+  "Fzg",
+  function() Snacks.picker.grep() end,
+  {}
+)
+
+
+
+vim.api.nvim_create_user_command(
   "Fzf",
   function() Snacks.picker.files() end,
   {}
