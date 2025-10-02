@@ -1,8 +1,8 @@
 
 vim.keymap.set(
-  {"n", "i"}, -- string or table
+  {"n", "c", "v", "i", "o"}, -- string or table
   "<C-c>", -- string
-  "<Esc>" -- string or function
+  "<Esc>"
 )
 
 vim.keymap.set(
@@ -15,7 +15,7 @@ vim.keymap.set(
   {"n","t"}, -- string or table
   "<C-Up>", -- string
   function()
-    vim.cmd('resize +1') 
+    vim.cmd('resize -1') 
   end -- string or function
 )
 
@@ -23,7 +23,7 @@ vim.keymap.set(
   {"n","t"}, -- string or table
   "<C-Down>", -- string
   function()
-    vim.cmd('resize -1') 
+    vim.cmd('resize +1') 
   end -- string or function
 )
 
