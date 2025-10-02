@@ -6,6 +6,12 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
+  {"n"}, -- string or table
+  "nl", -- string
+  "o<Esc>" -- string or function
+)
+
+vim.keymap.set(
   {"n","t"}, -- string or table
   "<C-Up>", -- string
   function()
