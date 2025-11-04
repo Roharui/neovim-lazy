@@ -4,3 +4,4 @@
 
 vim.opt.relativenumber = false
 vim.opt.mouse = ""
+vim.opt.clipboard = "unnamed,unnamedplus"
