@@ -4,16 +4,3 @@
 
 vim.opt.relativenumber = false
 vim.opt.mouse = ""
-
-vim.g.clipboard = {
-  name = "wslclipboard",
-  copy = {
-    ["+"] = "clip.exe",
-    ["*"] = "clip.exe",
-  },
-  paste = {
-    ["+"] = "powershell.exe -command 'Get-Clipboard' | sed 's/\r\n//g'",
-    ["*"] = "powershell.exe -command 'Get-Clipboard' | sed 's/\r\n//g'",
-  },
-  cache_enabled = 0,
-}
